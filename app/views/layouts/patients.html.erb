@@ -1,0 +1,310 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Doctors in Nagpur- Top Nagpur Doctors  - Famous Doctors in Nagpur- Search Doctors in Nagpur</title>
+<link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon"/>
+<link href="/assets/style.css" rel="stylesheet" type="text/css" />
+<link href="/assets/tab.css" rel="stylesheet" type="text/css" />
+
+
+<script type="text/javascript" src="/assets/tabber.js"></script>
+<script type="text/javascript">
+
+/* Optional: Temporarily hide the "tabber" class so it does not "flash"
+   on the page as plain HTML. After tabber runs, the class is changed
+   to "tabberlive" and it will appear. */
+
+
+</script>
+<%= stylesheet_link_tag    "application",'style' %>
+<%= javascript_include_tag 'jquery', 'nested_form','tabber' %>
+<%= javascript_include_tag 'application'%>
+    <%= csrf_meta_tag %>
+    <%= yield :javascript %>
+    <script type="text/javascript">
+    $(document).ajaxSend(function(e, xhr, options) {
+      var token = $("meta[name='csrf-token']").attr("content");
+      xhr.setRequestHeader("X-CSRF-Token", token);
+    });
+    </script>
+<%= ajaxful_rating_style %>
+<%= csrf_meta_tags %>
+</head>
+
+<body>
+<div align="center" id="maindiv">
+  <div id="header">
+    <div id="header_wrap">
+	<div id="logo"><a href="/"><img src="/assets/logo.png" alt="Mumbai Doctor" width="184" height="68" border="0" /></a> </div>
+	
+	
+	
+	<div class="topmenu">
+	<ul id="header-social">
+
+<li><a href="#"><img src="/assets/twitter.png" alt="Facebook" width="16" height="16" border="0"/></a></li>
+<li><a href="#"><img src="/assets/linkedin.png" alt="Facebook" width="16" height="16" border="0"/></a></li>
+<li><a href="https://www.facebook.com"><img src="/assets/facebook.png" alt="Facebook" width="16" height="16" border="0"/></a></li>
+
+</ul>
+	<ul>
+	<li><a href="#">Map</a></li>
+	<li>|</li>
+	  <% if user_signed_in? %>
+        		<li><a href="/users/sign_out">Sign out</a></li> 
+         <% else %>
+	<li><a href="/users/sign_in">Login</a></li> 
+	<li>|</li> 
+
+	<li><a href="/users/sign_up">Sign Up</a></li>
+	 <% end %>
+	</ul>
+	
+	
+	</div>
+	
+	
+	<div id="tabs">
+  <ul>
+    <li></li>
+    <li><a href="/"><span>Home</span></a></li>
+    <li><a href="#"><span>About Us</span></a></li>
+    <li><a href="#"><span>Doctor</span></a></li>
+    <li><a href="#"><span>Patient</span></a></li>
+    <li><a href="#"><span> FAQ</span></a></li>
+    <li><a href="#"><span>Contact</span></a></li>
+  </ul>
+</div>
+
+	
+	
+	
+    </div>
+  </div>
+  
+  <div id="map_bg">
+  <div id="map_image">
+  
+    <div id="map_wrap">
+	
+	<div id="search"><table width="85%" border="0" cellspacing="0" cellpadding="5">
+  <tr>
+    <td align="right" valign="middle"><strong>Keyword : </strong></td>
+    <td colspan="3" align="left" valign="middle"><label>
+      <input type="text" class="textfield1" name="textfield" />
+    </label></td>
+    </tr>
+  <tr>
+    <td align="right" valign="middle"><strong>Category :</strong></td>
+    <td align="left" valign="middle"><label>
+      <select name="select" class="textfield2">
+        <option>Select category</option>
+      </select>
+    </label></td>
+    <td width="8%" align="left" valign="middle"><strong>City : </strong></td>
+    <td align="left" valign="middle"><select name="select2" class="textfield2">
+      <option>Select City</option>
+        </select></td>
+  </tr>
+  <tr>
+    <td align="right" valign="middle"><strong>Address :</strong></td>
+    <td align="left" valign="middle"><input type="text" name="textfield22" class="textfield3" /></td>
+    <td align="left" valign="middle">&nbsp;</td>
+    <td align="left" valign="middle"><select name="select3" class="textfield2">
+      <option>1 Miles</option>
+      <option>5 Miles</option>
+      <option>10 Miles</option>
+      <option>15 Miles</option>
+      <option>20 Miles</option>
+        </select></td>
+  </tr>
+  <tr>
+    <td align="right" valign="top">&nbsp;</td>
+    <td align="left" valign="middle"><label>
+      <input type="submit" name="Submit" value="Submit" class="search_button" />
+    </label></td>
+    <td align="left" valign="middle">&nbsp;</td>
+    <td align="left" valign="middle">&nbsp;</td>
+  </tr>
+</table>
+</div>
+	</div>
+  </div>
+  </div>
+  
+  <div id="strip">
+    <div id="strip2">
+	
+	<a href="#" class="link">View Hospital near Dharampeth</a> <a href="#" class="link">View Hospital near Sadar</a> <a href="#" class="link">View Hospital near Nandanvan  </a></div>
+  
+  </div>
+  
+  <div id="middle_wrap">
+  
+  
+  
+	
+    
+  </div>
+  
+   <div id="middle_wrap2">
+     <div id="middle_left">
+       <div id="left_menu_div">
+	   
+
+<ul class="slidemenu">
+<li><a href="#">List of Clinics</a></li>
+<li><a href="#">List of Hospitals</a></li>
+<li><a href="#">Health News</a></li>
+<li><a href="#">Doctors' Registration</a></li>
+<li><a href="#">Testimonials</a></li>
+<li><a href="#">Health Tips</a></li>	
+<li><a href="#">Recently Registered Doctors</a></li>
+<li><a href="#">Locate Through Map</a></li>		
+</ul>
+
+	   
+	   
+	   </div>
+	   
+	   
+       <div id="left_adv"><a href="#"><img src="/assets/banner1.jpg" alt="" width="160" height="134" border="0" /></a></div>
+     </div>
+	 
+	 
+	<div class="tabs">
+       	  <div class="tabber">
+
+
+
+    
+<%= yield%>
+     
+	 
+	      
+	 
+	      
+	 
+	 
+
+</div>
+          
+           <div class="clear"></div>       
+     </div> 
+		 
+		 
+		 
+		 
+		 <div id="right_adv">
+		 
+		 <div class="right_banner"><a href="#"><img src="/assets/banner2.jpg" alt="" border="0"/></a></div>
+		 
+		 <div class="right_banner"><a href="#"><img src="/assets/banner3.jpg" alt="" border="0"/></a></div>
+		 
+		 
+		 </div>
+	 
+	 
+	 
+	 
+	 
+   </div>
+       
+   <div id="middle_wrap3">
+     <div class="fdba">Find Doctors by area</div>
+     <div class="mapbox">
+	 
+	 <img src="/assets/city_map.png" alt="" />
+	 <div class="area_title">East Nagpur (350)</div>
+	 
+	 <ul class="area">
+<li><a href="#">» List of Clinics</a></li>
+<li><a href="#">» List of Hospitals</a></li>
+<li><a href="#">» Health News</a></li>
+<li><a href="#">» Doctors' Registration</a></li>
+<li><a href="#">» Testimonials</a></li>
+<li><a href="#">» Health Tips</a></li>	
+<li><a href="#">» Recently Registered Doctors</a></li>
+<li><a href="#">» Locate Through Map</a></li>		
+</ul>
+	 </div>
+	 
+	 <div class="mapbox">
+	 
+	 <img src="/assets/city_map.png" alt="" />
+	 <div class="area_title">West Nagpur (120)</div>
+	 
+	 <ul class="area">
+<li><a href="#">» List of Clinics</a></li>
+<li><a href="#">» List of Hospitals</a></li>
+<li><a href="#">» Health News</a></li>
+<li><a href="#">» Doctors' Registration</a></li>
+<li><a href="#">» Testimonials</a></li>
+<li><a href="#">» Health Tips</a></li>	
+<li><a href="#">» Recently Registered Doctors</a></li>
+<li><a href="#">» Locate Through Map</a></li>		
+</ul>
+	 </div>
+	 
+	 
+	 <div class="mapbox">
+	 
+	 <img src="/assets/city_map.png" alt="" />
+	 <div class="area_title">North Nagpur (250)</div>
+	 
+	 <ul class="area">
+<li><a href="#">» List of Clinics</a></li>
+<li><a href="#">» List of Hospitals</a></li>
+<li><a href="#">» Health News</a></li>
+<li><a href="#">» Doctors' Registration</a></li>
+<li><a href="#">» Testimonials</a></li>
+<li><a href="#">» Health Tips</a></li>	
+<li><a href="#">» Recently Registered Doctors</a></li>
+<li><a href="#">» Locate Through Map</a></li>		
+</ul>
+	 </div>
+	 
+	 <div class="mapbox">
+	 
+	 <img src="/assets/city_map.png" alt="" />
+	 <div class="area_title">South Nagpur (480)</div>
+	 
+	 <ul class="area">
+<li><a href="#">» List of Clinics</a></li>
+<li><a href="#">» List of Hospitals</a></li>
+<li><a href="#">» Health News</a></li>
+<li><a href="#">» Doctors' Registration</a></li>
+<li><a href="#">» Testimonials</a></li>
+<li><a href="#">» Health Tips</a></li>	
+<li><a href="#">» Recently Registered Doctors</a></li>
+<li><a href="#">» Locate Through Map</a></li>		
+</ul>
+	 </div>
+
+   </div>
+  
+  
+   <div id="footer">
+     <div id="footer_wrap">
+       <div id="footer_left">
+	   <a href="#" class="footer_link">Privacy Policy</a> | <a href="#" class="footer_link">Terms &amp; Conditions</a> | <a href="#" class="footer_link">Disclaimer</a> | <a href="#" class="footer_link">Sitemap</a> | <a href="#" class="footer_link">Careers</a> |  </div>
+	   
+	<div style="float:left; width:88px; height:31px;  margin:10px 0 10px 0">
+    <a href="http://validator.w3.org/check?uri=referer"><img
+      src="http://www.w3.org/Icons/valid-xhtml10" alt="Valid XHTML 1.0 Transitional" width="88" height="31" border="0" /></a></div>
+ 
+	   
+	   <div id="footer_right">Mumbai Doctors © 2010. Powered by:<a href="http://www.kunalinfotech.net" target="_blank" class="footer_link"><strong> Kunal Infotech Pvt Ltd.</strong></a></div>
+	   
+ 
+	   
+	   
+	   
+	   
+	   
+     </div>
+  </div>
+</div>
+</body>
+</html>

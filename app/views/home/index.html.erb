@@ -1,0 +1,50 @@
+   <div class="tabbertab">
+  <%= paginate @vaidyas %>
+
+	  <h2>Recently Added</h2>
+	  <% @vaidyas.each do |vaidyas| %>
+	  
+<div class="doctor_box">
+  <div class="doctor_heading"> <%= link_to "Dr. #{vaidyas.name}", {:action=>"show", :controller=>"vaidyas", :id => vaidyas.user_id} %> </div>
+  <div>Category » <%= vaidyas.categories_ds.first.name %></div>
+  <div><%= ratings_for vaidyas, :static, :size => "medium"%></div>
+</div>
+
+<% end %>
+    </div>
+
+      <div class="tabbertab">
+	  <h2>Famous Doctors in Mumbai </h2>	 
+
+ <% @doc_rate.each do |vaidyas| %>
+
+<% if  vaidyas.rates.first.stars == 5.0%>
+<div class="doctor_box">
+  <div class="doctor_heading"> <%= link_to "Dr. #{vaidyas.name}", {:action=>"show", :controller=>"vaidyas", :id => vaidyas.user_id} %> </div>
+  <div>Category » <%= vaidyas.categories_ds.first.name %></div>
+  
+  <div><%= ratings_for vaidyas, :small_stars => true %></div>
+</div>
+<%end%>
+
+
+<%end%>
+	</div>
+          
+           <div class="clear"></div>    
+
+	  
+
+
+     
+	 
+	      
+	 
+	      
+  
+
+  
+
+	 
+	 
+	 

@@ -1,0 +1,5 @@
+<h1>Welcome Doctor </h1>(<%= current_user.email %>)
+<p><b><%= link_to 'My Profile', {:action=>"show", :controller=>"vaidyas", :id=>"#{current_user.id}"} %></b>
+<b><%= link_to 'Edit My Profile',    {:action=>"edit", :controller=>"vaidyas", :id=>"#{current_user.id}"} %></b></p>
+<p>
+  

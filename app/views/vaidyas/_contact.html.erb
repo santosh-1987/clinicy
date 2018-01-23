@@ -1,0 +1,30 @@
+<p>
+    <%= f.label       :address %><br />
+    <%= f.text_field  :address_line_1 %><br />
+    <%= f.text_field  :address_line_2 %><br />
+    <%= f.text_field  :address_line_3 %>
+  </p>
+   <p>
+    <%= f.label       :state %><br />
+    <%= f.text_field  :state  %>
+  </p> 
+   <p>
+    <%= f.label       :city%><br />
+    <%= f.text_field  :city  %>
+  <p>
+    <%= f.label       :country %><br />
+    <%= f.text_field  :country  %>
+  </p>
+   <p>
+    <%= f.label       :contact_no %><br />
+    <%= f.text_field  :contact_no  %>
+  </p>
+   <p>
+    <%= f.label       :fax_no %><br />
+    <%= f.text_field  :fax_no  %>
+  </p>
+    <p>
+    <%= f.label       :website_url %><br />
+    <%= f.text_field  :website_url  %>
+  </p>  
+   <%= f.hidden_field :id, :value => @vaidya.id %>    

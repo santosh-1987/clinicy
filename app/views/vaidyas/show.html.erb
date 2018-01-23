@@ -1,0 +1,39 @@
+<h1>Doctor </h1>
+<p><b>Name:</b>
+<%= @vaidya.name %>
+</p>
+
+<p><b>Qualification:</b>
+<%= @vaidya.qualification %>
+</p>
+<p><b>Speciality:</b>
+<%= @vaidya.speciality %>
+</p>
+<p><b>Affiliation:</b>
+<%= @vaidya.affiliation %>
+</p>
+<p><b>Awards:</b>
+<%= @vaidya.awards %>
+</p>
+<p><b>Catagory:</b>
+	<%= @vaidya.categories_ds.first.name %>
+</p>
+
+<p>
+	
+	<% if user_signed_in?%>
+	  <% if current_user.role? :patient%>
+        Rating <%= ratings_for @vaidya %>
+      <%else%>
+        Rating <%= ratings_for @vaidya, :static %>
+      <%end%>
+    <%else%>
+      <% if User.find_by_id(params[:id]).role? :patient%>
+         Rating <%= ratings_for @vaidya %>
+      <%else%>
+         Rating <%= ratings_for @vaidya, :static %>
+      <%end%>
+   <%end%>	
+</p>
+
+<%= render "enquiries/enq" , :object => @vaidya %>

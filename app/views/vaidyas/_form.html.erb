@@ -1,0 +1,32 @@
+<%= form_for(@vaidya) do |f| %>
+<p>
+<%= f.label      :name %><br />
+<%= f.text_field :name %>
+</p>
+<p>
+<%= f.label      :qualification %><br />
+<%= f.text_field :qualification %>
+</p>
+<p>
+<%= f.label      :speciality%><br />
+<%= f.text_field :speciality %>
+</p>
+<p>
+<%= f.label      :affiliation %><br />
+<%= f.text_field :affiliation %>
+</p>
+<p>
+<%= f.label      :awards %><br />
+<%= f.text_field :awards %>
+</p>
+
+<p><%= f.label   :Select_catagory %></p>
+     <% for categories_d in CategoriesD.find(:all) %>
+              <%= radio_button_tag "vaidya[categories_d_ids][]",categories_d.id, @vaidya.categories_ds.include?(categories_d) %>
+              <%= categories_d.name %>
+             <% end %></p>
+            
+<%= f.hidden_field :user_id, :value => current_user.id %>                  
+<p><%= f.submit "Create" %></p>
+
+<% end %>
